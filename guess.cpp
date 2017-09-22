@@ -1,3 +1,4 @@
+//Author: Matthew Burns
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -10,7 +11,9 @@ int main() {
     srand ( time (NULL) );
     int randomnumber;
     int guess;
+    string play;
 
+    do{
     randomnumber = rand() % 10 + 1; 
 
     cout<<"Guess the computer's number(1-10):"<<endl;
@@ -30,7 +33,10 @@ int main() {
     {
     cout<<"You, guessed correctly!  You win!"<<endl;
     }
- 
+    
+    cout<<"Would you like to play again?(Yes/No)"<<endl;
+    cin>>play;
+    }while (play == "Yes" || play == "yes"); 
 
     return 0;
     }
